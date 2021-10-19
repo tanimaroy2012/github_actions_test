@@ -1,4 +1,4 @@
-name: 12 - Run Workflow
+name: 12 - Run Workflow copy
 
 on:
   workflow_run:
