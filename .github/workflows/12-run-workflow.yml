@@ -3,7 +3,9 @@ name: 12 - Run Workflow
 on:
   workflow_run:
     workflows: ["Test 11"]
-    types: [completed] #requested
+    branches: [pr-test-1]
+    types: 
+      - completed #requested
 
 jobs:
   on-success:
