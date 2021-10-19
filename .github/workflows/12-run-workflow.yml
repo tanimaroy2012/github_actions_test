@@ -2,9 +2,10 @@ name: 12 - Run Workflow
 
 on:
   workflow_run:
-    workflows: ["Test 11"]
-    types: [completed] #requested
-
+    workflows: ["24 - Github Context"]
+    types: 
+      - completed
+      
 jobs:
   on-success:
     runs-on: ubuntu-latest
