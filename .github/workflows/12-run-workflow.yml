@@ -15,7 +15,7 @@ jobs:
           echo github.event.number = ${{ github.event.number  }}
           echo github.event.pull_request.number = ${{ github.event.pull_request.number }}
           echo github.event.issue.number = ${{ github.event.issue.number }}
-          echo "First workflow was a success"
+          echo "First workflow was a success new"
   
   on-failure:
     runs-on: ubuntu-latest
