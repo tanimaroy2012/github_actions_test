@@ -1,0 +1,17 @@
+name: 06 - Docker Image Workflow
+
+on:
+  schedule:
+  - cron: "0 5 * * *" # Runs at 5:00 UTC everyday
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run box version
+      uses: docker://foundeo/minibox:latest
+      with:
+        entrypoint: /opt/box/box
+        args: version
