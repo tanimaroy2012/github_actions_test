@@ -4,14 +4,16 @@ on:
   workflow_run:
     workflows: ["24 - Github Context"]
     types: 
-      - completed 
-      - requested
+      - completed
+
 
 jobs:
   on-success:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "First workflow was a success"
+      - run: |
+          echo "$GITHUB_CONTEXT"
+          echo "First workflow was a success"
   
   on-failure:
     runs-on: ubuntu-latest
