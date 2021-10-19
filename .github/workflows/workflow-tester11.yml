@@ -2,9 +2,7 @@ name: Test 11
 on:
     pull_request:
         types: [opened, synchronize, reopened, edited]
-        branches:
-            - dev
-
+        
 defaults:
     run:
         shell: bash
