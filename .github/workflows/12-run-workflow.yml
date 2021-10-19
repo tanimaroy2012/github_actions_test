@@ -2,7 +2,7 @@ name: 12 - Run Workflow
 
 on:
   workflow_run:
-    workflows: ["Test 11"]
+    workflows: ["24 - Github Context"]
     branches: [pr-test-1]
     types: 
       - completed #requested
