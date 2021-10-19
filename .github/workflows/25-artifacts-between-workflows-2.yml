@@ -1,7 +1,6 @@
 name: "25 - Artifacts between workflows 2"
 
 on:
-  on:
   repository_dispatch:
     types: [trigger-workflow-2]
 
