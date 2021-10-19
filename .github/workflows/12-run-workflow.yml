@@ -5,13 +5,17 @@ on:
     workflows: ["24 - Github Context"]
     types: 
       - completed
-      
+
 jobs:
   on-success:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo "First workflow was a success"
+      - run: |
+          echo github.event.number = ${{ github.event.number  }}
+          echo github.event.pull_request.number = ${{ github.event.pull_request.number }}
+          echo github.event.issue.number = ${{ github.event.issue.number }}
+          echo "First workflow was a success" ${{ github.event.number }}
   
   on-failure:
     runs-on: ubuntu-latest
