@@ -5,22 +5,22 @@ on:
 
 jobs:
   call-workflow-commit-hash:
-    uses: GuillaumeFalourd/poc-github-actions/.github/workflows/33-reusable-workflow.yml@ba6294c776b98a3b4f28e8a0b804b71e4b8d0b48
+    uses: tanimaroy2012/github-actions-test/.github/workflows/33-reusable-workflow.yml@ba6294c776b98a3b4f28e8a0b804b71e4b8d0b48
     with:
-      username: Guillaume
+      username: tanimaroy2012
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 
   call-workflow-branch-ref:
-    uses: GuillaumeFalourd/poc-github-actions/.github/workflows/33-reusable-workflow.yml@main
+    uses: tanimaroy2012/github-actions-test/.github/workflows/33-reusable-workflow.yml@main
     with:
-      username: Guillaume
+      username: tanimaroy2012
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 
   call-workflow-tag:
-    uses: GuillaumeFalourd/poc-github-actions/.github/workflows/33-reusable-workflow.yml@1.1.0
+    uses: tanimaroy2012/github-actions-test/.github/workflows/33-reusable-workflow.yml@1.1.0
     with:
-      username: Guillaume
+      username: tanimaroy2012
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
