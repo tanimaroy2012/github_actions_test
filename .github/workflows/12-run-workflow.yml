@@ -2,13 +2,14 @@ name: 12 - Run Workflow
 
 on:
   workflow_run:
-    workflows: ["Test 11"]
-    types: [completed] #requested
+    workflows: ["24 - Github Context"]
+    types: 
+      - completed 
+      - requested
 
 jobs:
   on-success:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - run: echo "First workflow was a success"
   
