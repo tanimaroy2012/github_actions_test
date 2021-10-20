@@ -6,11 +6,6 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout private repo
-        uses: actions/checkout@v2
-        with:
-          repository: ${{ github.repository }}
-          token: ${{ secrets.REPO_GHA_PAT }}
       - name: Save the PR number in an artifact
         shell: bash
         env:
