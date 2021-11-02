@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           sourceRunId: ${{ github.event.workflow_run.id }}
-      - run: echo ${steps.source-run-info.outputs.pullRequestNumber}
+      - run: echo ${{ steps.source-run-info.outputs.pullRequestNumber }}
   on-success:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
