@@ -2,7 +2,7 @@ name: 12 - Run Workflow
 
 on:
   workflow_run:
-    workflows: ["Workflow Tester"]
+    workflows: ["24 - Github Context"]
     types: completed
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     outputs:
       pullRequestNumber: ${{ steps.source-run-info.outputs.pullRequestNumber }}
     steps:
-      - name: "Get information about the origin 'CI' run"
+      - name: "Get information about the 'CI' run"
         uses: potiuk/get-workflow-origin@v1_1
         id: source-run-info
         with:

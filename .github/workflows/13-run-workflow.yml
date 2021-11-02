@@ -12,7 +12,7 @@ jobs:
     outputs:
       pullRequestNumber: ${{ steps.source-run-info.outputs.pullRequestNumber }}
     steps:
-      - name: "Get information about the origin 'CI' run"
+      - name: "Get information about the origin run"
         uses: potiuk/get-workflow-origin@v1_1
         id: source-run-info
         with:
