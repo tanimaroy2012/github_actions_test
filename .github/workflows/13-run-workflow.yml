@@ -1,8 +1,8 @@
-name: 12 - Run Workflow
+name: 13 - Run Workflow
 
 on:
   workflow_run:
-    workflows: ["Workflow Tester"]
+    workflows: ["12 - Run Workflow"]
     types: completed
 
 jobs:
