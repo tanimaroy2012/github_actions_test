@@ -35,4 +35,4 @@ jobs:
           repository_owner: ZupIT
           repository_name: docs-ritchie
           new_branch_name: test-${{ steps.vars.outputs.tag }}
-          access_token: ${{ secrets.ACCESS_TOKEN}}
+          access_token: ${{ secrets.GITHUB_TOKEN}}

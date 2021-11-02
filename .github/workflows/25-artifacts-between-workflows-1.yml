@@ -1,6 +1,8 @@
 name: "25 - Artifacts between workflows 1"
 
-on: pull_request
+on: 
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
   job1:
@@ -21,7 +23,7 @@ jobs:
         if: success()
         uses: peter-evans/repository-dispatch@v1
         with:
-          token: ${{ secrets.REPO_GHA_PAT }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
           event-type: trigger-workflow-2
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

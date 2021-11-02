@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.client_payload.sha }}
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
       - uses: r-lib/actions/setup-r@master
       
       - uses: r-lib/actions/setup-pandoc@master
@@ -18,7 +19,7 @@ jobs:
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.11.0
         with:
-          github_token: ${{ secrets.REPO_GHA_PAT }}
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
           workflow: peek_icons.yml
           run_id: ${{ github.event.workflow_run.id }}
 
